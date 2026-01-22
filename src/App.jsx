@@ -328,59 +328,31 @@ export default function BabyLionProductions() {
             beyond.
           </p>
 
-          {/* Video Placeholder */}
+          {/* Video Embed */}
           <div
+            className="video-placeholder"
             style={{
               aspectRatio: "16/9",
               maxWidth: "900px",
               margin: "0 auto",
-              background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
               borderRadius: "16px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              position: "relative",
               overflow: "hidden",
               boxShadow: "0 30px 60px rgba(0,0,0,0.15)",
             }}
           >
-            <div
-              style={{
-                width: "80px",
-                height: "80px",
-                borderRadius: "50%",
-                background: "rgba(255,255,255,0.95)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                transition: "transform 0.3s ease",
-              }}
-            >
-              <div
-                style={{
-                  width: 0,
-                  height: 0,
-                  borderTop: "12px solid transparent",
-                  borderBottom: "12px solid transparent",
-                  borderLeft: "20px solid #1a1a1a",
-                  marginLeft: "4px",
-                }}
-              />
-            </div>
-            <p
-              style={{
-                position: "absolute",
-                bottom: "2rem",
-                color: "rgba(255,255,255,0.7)",
-                fontSize: "0.9rem",
-              }}
-            >
-              Watch Our Showreel
-            </p>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/kde8OTwVpXk"
+              title="Baby Lion Productions Showreel"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              style={{ display: "block", border: "none" }}
+            />
           </div>
 
           <div
+            className="hero-buttons"
             style={{
               display: "flex",
               justifyContent: "center",
@@ -454,9 +426,10 @@ export default function BabyLionProductions() {
           </h2>
 
           <div
+            className="services-grid"
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
               gap: "2rem",
             }}
           >
@@ -525,9 +498,10 @@ export default function BabyLionProductions() {
           </h2>
 
           <div
+            className="work-grid"
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
               gap: "1.5rem",
             }}
           >
@@ -589,9 +563,10 @@ export default function BabyLionProductions() {
       <section id="about" style={{ padding: "8rem 2rem", background: "#fff" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div
+            className="about-grid"
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "4rem",
               alignItems: "center",
             }}
@@ -638,7 +613,7 @@ export default function BabyLionProductions() {
                 collaboratively to bring your vision to life with authenticity
                 and excellence.
               </p>
-              <div style={{ display: "flex", gap: "3rem", flexWrap: "wrap" }}>
+              <div className="stats-row" style={{ display: "flex", gap: "3rem", flexWrap: "wrap" }}>
                 <div>
                   <p style={{ fontSize: "2.5rem", fontWeight: 700 }}>50+</p>
                   <p style={{ color: "#888", fontSize: "0.9rem" }}>
@@ -660,6 +635,7 @@ export default function BabyLionProductions() {
               </div>
             </div>
             <div
+              className="about-image"
               style={{
                 aspectRatio: "1",
                 background: "linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%)",
@@ -719,6 +695,7 @@ export default function BabyLionProductions() {
             style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
           >
             <div
+              className="contact-form-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -883,6 +860,7 @@ export default function BabyLionProductions() {
               Or reach us directly
             </p>
             <div
+              className="contact-direct"
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -896,7 +874,7 @@ export default function BabyLionProductions() {
               >
                 hello@babylionproductions.com
               </a>
-              <span style={{ color: "#ccc" }}>|</span>
+              <span className="separator" style={{ color: "#ccc" }}>|</span>
               <a
                 href="tel:+2348160285265"
                 style={{ color: "#1a1a1a", textDecoration: "none" }}
@@ -917,6 +895,7 @@ export default function BabyLionProductions() {
         }}
       >
         <div
+          className="footer-content"
           style={{
             maxWidth: "1200px",
             margin: "0 auto",
@@ -941,11 +920,116 @@ export default function BabyLionProductions() {
         </div>
       </footer>
 
-      {/* CSS for responsive nav */}
+      {/* CSS for responsive styles */}
       <style>{`
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
+
+          /* Reduce section padding on mobile */
+          section {
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+          }
+
+          /* Fix hero section */
+          #home {
+            padding-top: 5rem !important;
+            min-height: auto !important;
+          }
+
+          /* Services grid - single column on mobile */
+          .services-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1rem !important;
+          }
+
+          /* Work/Portfolio grid - single column on mobile */
+          .work-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1rem !important;
+          }
+
+          /* About grid - single column, reorder */
+          .about-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+
+          /* Stats row */
+          .stats-row {
+            gap: 1.5rem !important;
+            justify-content: center !important;
+          }
+
+          .stats-row > div {
+            text-align: center;
+          }
+
+          /* Contact form grid */
+          .contact-form-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          /* Footer */
+          .footer-content {
+            flex-direction: column !important;
+            text-align: center !important;
+          }
+
+          /* Nav padding */
+          nav {
+            padding: 0.75rem 1rem !important;
+          }
+
+          /* Video placeholder adjustments */
+          .video-placeholder {
+            border-radius: 12px !important;
+          }
+
+          /* Hero buttons */
+          .hero-buttons {
+            flex-direction: column !important;
+            align-items: center !important;
+          }
+
+          .hero-buttons button {
+            width: 100% !important;
+            max-width: 280px !important;
+          }
+
+          /* Contact direct links */
+          .contact-direct {
+            flex-direction: column !important;
+            gap: 0.5rem !important;
+          }
+
+          .contact-direct .separator {
+            display: none !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          /* Extra small screens */
+          h1 {
+            font-size: 2rem !important;
+          }
+
+          h2 {
+            font-size: 1.75rem !important;
+            margin-bottom: 2rem !important;
+          }
+
+          .stats-row {
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+
+          .about-image {
+            aspect-ratio: 4/3 !important;
+          }
         }
       `}</style>
     </div>
