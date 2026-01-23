@@ -11,7 +11,7 @@ export default function BabyLionProductions() {
       setIsScrolled(window.scrollY > 50);
 
       // Update active section based on scroll position
-      const sections = ["home", "services", "work", "about", "contact"];
+      const sections = ["home", "services", "about", "contact"];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -39,7 +39,6 @@ export default function BabyLionProductions() {
   const navItems = [
     { id: "home", label: "Home" },
     { id: "services", label: "Services" },
-    { id: "work", label: "Work" },
     { id: "about", label: "About" },
     { id: "contact", label: "Contact" },
   ];
@@ -47,56 +46,28 @@ export default function BabyLionProductions() {
   const services = [
     {
       icon: "🎬",
-      title: "Commercial Production",
-      desc: "High-impact commercials that tell your brand story and drive results.",
+      title: "Commercials",
+      desc: "Crafting narratives that connect brands to audiences through authentic African storytelling and cultural resonance.",
     },
     {
-      icon: "🎵",
-      title: "Music Videos",
-      desc: "Visually stunning music videos that bring your sound to life.",
+      icon: "✨",
+      title: "Animations",
+      desc: "Bringing African stories to life through vivid animation — from concept art to fully realized visual worlds.",
     },
     {
       icon: "📽️",
       title: "Documentaries",
-      desc: "Compelling documentary films that capture real stories with authenticity.",
+      desc: "Capturing true life events with historical accuracy, shining a light on stories from underrepresented communities.",
+    },
+    {
+      icon: "🎙️",
+      title: "Podcasts",
+      desc: "Audio-visual storytelling that amplifies African voices, perspectives, and conversations worth having.",
     },
     {
       icon: "🎥",
-      title: "Corporate Videos",
-      desc: "Professional corporate content for training, events, and communications.",
-    },
-    {
-      icon: "✨",
-      title: "Post-Production",
-      desc: "Expert editing, color grading, VFX, and sound design.",
-    },
-    {
-      icon: "📱",
-      title: "Digital Content",
-      desc: "Engaging social media and digital-first video content.",
-    },
-  ];
-
-  const projects = [
-    {
-      title: "Brand Campaign",
-      client: "Luxury Fashion",
-      category: "Commercial",
-      color: "#1a1a2e",
-    },
-    {
-      title: "Coming Soon",
-      client: "Upcoming",
-      category: "In Production",
-      color: "#1a1a1a",
-      isPlaceholder: true,
-    },
-    {
-      title: "Coming Soon",
-      client: "Upcoming",
-      category: "In Production",
-      color: "#1a1a1a",
-      isPlaceholder: true,
+      title: "Films & Series",
+      desc: "Producing authentic African narratives for screen — stories that resonate locally and travel beyond borders.",
     },
   ];
 
@@ -137,6 +108,7 @@ export default function BabyLionProductions() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
+            position: "relative",
           }}
         >
           <div
@@ -156,13 +128,21 @@ export default function BabyLionProductions() {
 
           {/* Desktop Nav */}
           <div
-            style={{ display: "flex", gap: "2rem", alignItems: "center" }}
+            style={{
+              display: "flex",
+              gap: "2rem",
+              alignItems: "center",
+              position: "absolute",
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
             className="desktop-nav"
           >
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
+                className="nav-item"
                 style={{
                   background: "none",
                   border: "none",
@@ -170,9 +150,10 @@ export default function BabyLionProductions() {
                   fontSize: "0.9rem",
                   color: activeSection === item.id ? "#1a1a1a" : "#666",
                   fontWeight: activeSection === item.id ? 600 : 400,
-                  transition: "color 0.2s ease",
-                  padding: "0.5rem 0",
+                  transition: "color 0.2s ease, transform 0.2s ease",
+                  padding: "0.5rem 0.75rem",
                   position: "relative",
+                  borderRadius: "6px",
                 }}
               >
                 {item.label}
@@ -181,8 +162,8 @@ export default function BabyLionProductions() {
                     style={{
                       position: "absolute",
                       bottom: 0,
-                      left: 0,
-                      right: 0,
+                      left: "0.75rem",
+                      right: "0.75rem",
                       height: "2px",
                       background: "#1a1a1a",
                     }}
@@ -299,7 +280,7 @@ export default function BabyLionProductions() {
               marginBottom: "1.5rem",
             }}
           >
-            Film & Video Production
+            TV / Film Production
           </p>
           <h1
             style={{
@@ -310,9 +291,9 @@ export default function BabyLionProductions() {
               letterSpacing: "-0.03em",
             }}
           >
-            We bring stories
+            Authentic African
             <br />
-            <span style={{ color: "#666" }}>to life.</span>
+            <span style={{ color: "#666" }}>stories, told right.</span>
           </h1>
           <p
             style={{
@@ -323,9 +304,8 @@ export default function BabyLionProductions() {
               lineHeight: 1.6,
             }}
           >
-            Baby Lion Productions & Device Limited crafts compelling visual
-            narratives for brands, artists, and storytellers across Africa and
-            beyond.
+            Baby Lion Productions & Device Limited is a TV/film company telling
+            authentic African stories that resonate locally and beyond borders.
           </p>
 
           {/* Video Embed */}
@@ -362,7 +342,7 @@ export default function BabyLionProductions() {
             }}
           >
             <button
-              onClick={() => scrollToSection("work")}
+              onClick={() => scrollToSection("services")}
               style={{
                 padding: "1rem 2rem",
                 background: "#1a1a1a",
@@ -375,7 +355,7 @@ export default function BabyLionProductions() {
                 transition: "all 0.2s ease",
               }}
             >
-              View Our Work
+              What We Do
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -436,11 +416,11 @@ export default function BabyLionProductions() {
             {services.map((service, i) => (
               <div
                 key={i}
+                className="service-card"
                 style={{
                   padding: "2rem",
                   background: "#fafafa",
                   borderRadius: "12px",
-                  transition: "all 0.3s ease",
                   cursor: "default",
                 }}
               >
@@ -463,96 +443,6 @@ export default function BabyLionProductions() {
                   {service.title}
                 </h3>
                 <p style={{ color: "#666", lineHeight: 1.6 }}>{service.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Work/Portfolio Section */}
-      <section
-        id="work"
-        style={{ padding: "8rem 2rem", background: "#fafafa" }}
-      >
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: "0.85rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.2em",
-              color: "#888",
-              marginBottom: "1rem",
-            }}
-          >
-            Portfolio
-          </p>
-          <h2
-            style={{
-              fontSize: "clamp(2rem, 5vw, 3rem)",
-              fontWeight: 700,
-              marginBottom: "4rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Selected Work
-          </h2>
-
-          <div
-            className="work-grid"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "1.5rem",
-            }}
-          >
-            {projects.map((project, i) => (
-              <div
-                key={i}
-                style={{
-                  aspectRatio: "4/3",
-                  background: `linear-gradient(135deg, ${project.color} 0%, #0a0a0a 100%)`,
-                  borderRadius: "12px",
-                  padding: "2rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-end",
-                  cursor: "pointer",
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                <span
-                  style={{
-                    position: "absolute",
-                    top: "1.5rem",
-                    left: "1.5rem",
-                    background: "rgba(255,255,255,0.15)",
-                    padding: "0.4rem 0.8rem",
-                    borderRadius: "20px",
-                    fontSize: "0.75rem",
-                    color: "rgba(255,255,255,0.8)",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.1em",
-                  }}
-                >
-                  {project.category}
-                </span>
-                <h3
-                  style={{
-                    color: "white",
-                    fontSize: "1.5rem",
-                    fontWeight: 600,
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  {project.title}
-                </h3>
-                <p
-                  style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem" }}
-                >
-                  {project.client}
-                </p>
               </div>
             ))}
           </div>
@@ -591,7 +481,7 @@ export default function BabyLionProductions() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Crafting visual stories since 2018
+                Telling authentic African stories since 2024
               </h2>
               <p
                 style={{
@@ -600,39 +490,51 @@ export default function BabyLionProductions() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Baby Lion Productions & Device Limited is a full-service video
-                production company based in Nigeria. We specialize in creating
-                compelling visual content that resonates with audiences and
-                drives meaningful impact for our clients.
+                Baby Lion Productions & Device Limited is a TV/film company
+                telling authentic African stories that resonate locally and
+                beyond borders. Every frame we craft carries the weight of real
+                experiences and the richness of cultures waiting to be seen.
               </p>
-              <p
-                style={{ color: "#666", lineHeight: 1.8, marginBottom: "2rem" }}
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: 600,
+                  marginBottom: "0.75rem",
+                  color: "#1a1a1a",
+                }}
               >
-                From concept to final delivery, our team of passionate
-                filmmakers, editors, and creative strategists work
-                collaboratively to bring your vision to life with authenticity
-                and excellence.
+                Our Focus
+              </h3>
+              <p
+                style={{
+                  color: "#666",
+                  lineHeight: 1.8,
+                  marginBottom: "1.5rem",
+                }}
+              >
+                True life events — especially historically accurate content from
+                the South-South region and other underrepresented parts of
+                Nigeria. These are stories that have shaped communities, yet
+                remain untold on the global stage.
               </p>
-              <div className="stats-row" style={{ display: "flex", gap: "3rem", flexWrap: "wrap" }}>
-                <div>
-                  <p style={{ fontSize: "2.5rem", fontWeight: 700 }}>50+</p>
-                  <p style={{ color: "#888", fontSize: "0.9rem" }}>
-                    Projects Completed
-                  </p>
-                </div>
-                <div>
-                  <p style={{ fontSize: "2.5rem", fontWeight: 700 }}>30+</p>
-                  <p style={{ color: "#888", fontSize: "0.9rem" }}>
-                    Happy Clients
-                  </p>
-                </div>
-                <div>
-                  <p style={{ fontSize: "2.5rem", fontWeight: 700 }}>6+</p>
-                  <p style={{ color: "#888", fontSize: "0.9rem" }}>
-                    Years Experience
-                  </p>
-                </div>
-              </div>
+              <h3
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: 600,
+                  marginBottom: "0.75rem",
+                  color: "#1a1a1a",
+                }}
+              >
+                Our Goal
+              </h3>
+              <p
+                style={{ color: "#666", lineHeight: 1.8 }}
+              >
+                Creating rich African experiences with vast untapped
+                opportunities — connecting the local market to the global stage.
+                We believe the world is ready for these narratives, and we're
+                here to deliver them.
+              </p>
             </div>
             <div
               className="about-image"
@@ -792,10 +694,11 @@ export default function BabyLionProductions() {
                 }}
               >
                 <option value="">Select a project type</option>
-                <option value="commercial">Commercial Production</option>
-                <option value="music-video">Music Video</option>
+                <option value="commercial">Commercial</option>
+                <option value="animation">Animation</option>
                 <option value="documentary">Documentary</option>
-                <option value="corporate">Corporate Video</option>
+                <option value="podcast">Podcast</option>
+                <option value="film-series">Film / Series</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -864,8 +767,6 @@ export default function BabyLionProductions() {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                gap: "2rem",
-                flexWrap: "wrap",
               }}
             >
               <a
@@ -873,13 +774,6 @@ export default function BabyLionProductions() {
                 style={{ color: "#1a1a1a", textDecoration: "none" }}
               >
                 babylionproductionsdevice@gmail.com
-              </a>
-              <span className="separator" style={{ color: "#ccc" }}>|</span>
-              <a
-                href="tel:+2348160285265"
-                style={{ color: "#1a1a1a", textDecoration: "none" }}
-              >
-                +234 816 028 5265
               </a>
             </div>
           </div>
@@ -971,6 +865,92 @@ export default function BabyLionProductions() {
 
       {/* CSS for responsive styles */}
       <style>{`
+        /* Hover states and micro-interactions */
+        .nav-item:hover {
+          color: #1a1a1a !important;
+          background: rgba(0, 0, 0, 0.04);
+        }
+
+        .service-card {
+          transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease !important;
+        }
+
+        .service-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+          background: #f0f0f0 !important;
+        }
+
+        .hero-buttons button {
+          transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, opacity 0.2s ease !important;
+        }
+
+        .hero-buttons button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-buttons button:active {
+          transform: translateY(0);
+        }
+
+        button[type="submit"]:hover {
+          background: #333 !important;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        button[type="submit"]:active {
+          transform: translateY(0);
+        }
+
+        input:focus, textarea:focus, select:focus {
+          border-color: #1a1a1a !important;
+          box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.08);
+        }
+
+        .footer-content a:hover svg {
+          transform: scale(1.15);
+          color: #1a1a1a;
+        }
+
+        .footer-content a svg {
+          transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .contact-direct a {
+          transition: color 0.2s ease !important;
+        }
+
+        .contact-direct a:hover {
+          color: #666 !important;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        section > div {
+          animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .video-placeholder {
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .video-placeholder:hover {
+          box-shadow: 0 35px 70px rgba(0,0,0,0.2) !important;
+          transform: translateY(-2px);
+        }
+
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
@@ -995,26 +975,10 @@ export default function BabyLionProductions() {
             gap: 1rem !important;
           }
 
-          /* Work/Portfolio grid - single column on mobile */
-          .work-grid {
-            grid-template-columns: 1fr !important;
-            gap: 1rem !important;
-          }
-
           /* About grid - single column, reorder */
           .about-grid {
             grid-template-columns: 1fr !important;
             gap: 2rem !important;
-          }
-
-          /* Stats row */
-          .stats-row {
-            gap: 1.5rem !important;
-            justify-content: center !important;
-          }
-
-          .stats-row > div {
-            text-align: center;
           }
 
           /* Contact form grid */
@@ -1030,7 +994,8 @@ export default function BabyLionProductions() {
 
           /* Nav padding */
           nav {
-            padding: 0.75rem 1rem !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
           }
 
           /* Video placeholder adjustments */
@@ -1049,15 +1014,6 @@ export default function BabyLionProductions() {
             max-width: 280px !important;
           }
 
-          /* Contact direct links */
-          .contact-direct {
-            flex-direction: column !important;
-            gap: 0.5rem !important;
-          }
-
-          .contact-direct .separator {
-            display: none !important;
-          }
         }
 
         @media (max-width: 480px) {
@@ -1069,11 +1025,6 @@ export default function BabyLionProductions() {
           h2 {
             font-size: 1.75rem !important;
             margin-bottom: 2rem !important;
-          }
-
-          .stats-row {
-            flex-direction: column !important;
-            gap: 1rem !important;
           }
 
           .about-image {
