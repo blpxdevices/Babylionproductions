@@ -809,7 +809,7 @@ export default function BabyLionProductions() {
           </div>
           <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
             <a
-              href="https://www.instagram.com/reel/DELTaENgKwY/?igsh=MTc3M2gyZDc1czMxag=="
+              href="https://www.instagram.com/babylionproductionsplusdevice?igsh=d2JnOWxnbGVqYjNs"
               target="_blank"
               rel="noopener noreferrer"
               style={{
