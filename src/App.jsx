@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import teamPhoto from "./assets/team-photo.jpg";
+import logo from "/Logo.jpeg";
 
 // Baby Lion Productions & Device Limited - Landing Page
 export default function BabyLionProductions() {
@@ -114,16 +115,26 @@ export default function BabyLionProductions() {
         >
           <div
             style={{
-              fontWeight: 700,
-              fontSize: "1.1rem",
-              letterSpacing: "-0.02em",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.75rem",
             }}
           >
-            <span style={{ color: "#1a1a1a" }}>BABY LION</span>
-            <span
-              style={{ color: "#666", fontWeight: 400, marginLeft: "0.5rem" }}
-            >
-              Productions
+            <img
+              src={logo}
+              alt="Baby Lion Productions"
+              style={{
+                height: "40px",
+                width: "40px",
+                objectFit: "contain",
+                borderRadius: "50%",
+              }}
+            />
+            <span style={{ fontWeight: 700, fontSize: "1.1rem", letterSpacing: "-0.02em" }}>
+              <span style={{ color: "#1a1a1a" }}>BABY LION</span>
+              <span style={{ color: "#666", fontWeight: 400, marginLeft: "0.5rem" }}>
+                Productions
+              </span>
             </span>
           </div>
 
@@ -558,6 +569,70 @@ export default function BabyLionProductions() {
         </div>
       </section>
 
+      {/* Newsletter Section */}
+      <section
+        id="newsletter"
+        style={{
+          padding: "6rem 2rem",
+          background: "#1a1a1a",
+        }}
+      >
+        <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
+          <p
+            style={{
+              fontSize: "0.85rem",
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              color: "#888",
+              marginBottom: "1rem",
+            }}
+          >
+            Stay Updated
+          </p>
+          <h2
+            style={{
+              fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
+              fontWeight: 700,
+              marginBottom: "1rem",
+              letterSpacing: "-0.02em",
+              color: "#fff",
+            }}
+          >
+            Subscribe to Our Newsletter
+          </h2>
+          <p
+            style={{
+              color: "#999",
+              marginBottom: "2rem",
+              lineHeight: 1.6,
+            }}
+          >
+            Get the latest updates on our productions, behind-the-scenes content,
+            and African storytelling insights delivered to your inbox.
+          </p>
+          <div
+            style={{
+              maxWidth: "480px",
+              margin: "0 auto",
+              background: "#fff",
+              borderRadius: "12px",
+              padding: "1.5rem",
+            }}
+          >
+            <iframe
+              src="https://blpxdevices.substack.com/embed"
+              width="100%"
+              height="120"
+              style={{
+                border: "none",
+                background: "#fff",
+              }}
+              title="Subscribe to Newsletter"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section
         id="contact"
@@ -799,12 +874,22 @@ export default function BabyLionProductions() {
             gap: "1rem",
           }}
         >
-          <div>
-            <span style={{ fontWeight: 700 }}>BABY LION</span>
-            <span
-              style={{ color: "#666", fontWeight: 400, marginLeft: "0.5rem" }}
-            >
-              Productions & Device Limited
+          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+            <img
+              src={logo}
+              alt="Baby Lion Productions"
+              style={{
+                height: "40px",
+                width: "40px",
+                objectFit: "contain",
+                borderRadius: "50%",
+              }}
+            />
+            <span>
+              <span style={{ fontWeight: 700 }}>BABY LION</span>
+              <span style={{ color: "#666", fontWeight: 400, marginLeft: "0.5rem" }}>
+                Productions
+              </span>
             </span>
           </div>
           <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
@@ -892,6 +977,12 @@ export default function BabyLionProductions() {
 
         .hero-buttons button:hover {
           transform: translateY(-2px);
+        }
+
+        .subscribe-btn:hover {
+          background: #e55a10 !important;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(255, 103, 25, 0.3);
           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
