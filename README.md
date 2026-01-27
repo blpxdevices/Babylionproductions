@@ -14,8 +14,9 @@ npm install
 npm run dev
 ```
 
-## Build
+## Buil
 
 ```bash
 npm run build
 ```
+
