@@ -680,13 +680,11 @@ export default function BabyLionProductions() {
                 marginBottom: "1.5rem",
               }}
             >
-              <em>Udoidunima The Film</em> is, by any rational measure, already
-              made. The performances exist. The footage is cut. What remains is
-              the part most people never think about — the sound design that
-              makes you feel a scene before you understand it, the colour grading
-              that turns footage into memory, the subtitling and distribution
-              that determines whether a story reaches its audience or disappears
-              quietly into a hard drive.
+              Our current project is at a critical stage, and community support
+              allows us to complete post production and distribution and
+              marketing of <em>Udoidunima The Film</em>. At this point, support
+              is essential to ensure the work is finished with care and shared
+              responsibly with audiences who value meaningful African stories.
             </p>
             <p
               style={{
@@ -696,12 +694,12 @@ export default function BabyLionProductions() {
                 marginBottom: "2.5rem",
               }}
             >
-              This is not a request for charity. It is an invitation to be
-              early. The people who matter in cultural history are rarely the
-              ones who arrived once something was already famous. Supporting
-              Udoidunima now means backing African cinema at the exact moment it
-              is becoming something the world is ready for — before the world
-              has noticed.
+              Every contribution directly supports the final stages of the film,
+              including sound design, colour grading, subtitling, private
+              screenings, festival submissions and access for wider audiences.
+              By supporting this project, you are helping preserve culture,
+              honour lived experiences and ensure these stories are told with
+              integrity and long term value.
             </p>
             <div style={{ textAlign: "center" }}>
               <a
