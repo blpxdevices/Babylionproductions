@@ -681,10 +681,11 @@ export default function BabyLionProductions() {
               }}
             >
               Our current project is at a critical stage, and community support
-              allows us to complete post production and distribution and
-              marketing of <em>Udoidunima The Film</em>. At this point, support
-              is essential to ensure the work is finished with care and shared
-              responsibly with audiences who value meaningful African stories.
+              allows us to complete post production, distribution and marketing
+              of <em>Udoidunima The Film</em>. This is not a request for
+              charity, it is an invitation to be early in backing African cinema
+              at the exact moment it is becoming something the world is ready
+              for — before the world has noticed.
             </p>
             <p
               style={{
@@ -694,12 +695,10 @@ export default function BabyLionProductions() {
                 marginBottom: "2.5rem",
               }}
             >
-              Every contribution directly supports the final stages of the film,
-              including sound design, colour grading, subtitling, private
-              screenings, festival submissions and access for wider audiences.
-              By supporting this project, you are helping preserve culture,
-              honour lived experiences and ensure these stories are told with
-              integrity and long term value.
+              Every contribution directly supports festival submissions and
+              access for wider audiences. By being a part of this project, you
+              are helping preserve culture, honour lived experiences and ensure
+              these stories are told with integrity and long term value.
             </p>
             <div style={{ textAlign: "center" }}>
               <a
