@@ -42,7 +42,7 @@ export default function BabyLionProductions() {
     { id: "home", label: "Home" },
     { id: "services", label: "Services" },
     { id: "about", label: "About" },
-    { id: "contact", label: "Contact" },
+    { id: "contact", label: "Partner With Us" },
   ];
 
   const services = [
@@ -639,7 +639,108 @@ export default function BabyLionProductions() {
         style={{ padding: "8rem 2rem", background: "#fff" }}
       >
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <p
+              style={{
+                fontSize: "0.85rem",
+                textTransform: "uppercase",
+                letterSpacing: "0.2em",
+                color: "#888",
+                marginBottom: "1rem",
+              }}
+            >
+              Support Our Work
+            </p>
+            <h2
+              style={{
+                fontSize: "clamp(2rem, 5vw, 3rem)",
+                fontWeight: 700,
+                marginBottom: "1rem",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Partner With Us
+            </h2>
+          </div>
+
+          {/* Project Story */}
+          <div
+            style={{
+              background: "#1a1a1a",
+              borderRadius: "16px",
+              padding: "3rem",
+              marginBottom: "4rem",
+            }}
+          >
+            <p
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: 1.8,
+                color: "#d4d4d4",
+                marginBottom: "1.5rem",
+              }}
+            >
+              <em>Udoidunima The Film</em> is, by any rational measure, already
+              made. The performances exist. The footage is cut. What remains is
+              the part most people never think about — the sound design that
+              makes you feel a scene before you understand it, the colour grading
+              that turns footage into memory, the subtitling and distribution
+              that determines whether a story reaches its audience or disappears
+              quietly into a hard drive.
+            </p>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: 1.8,
+                color: "#d4d4d4",
+                marginBottom: "2.5rem",
+              }}
+            >
+              This is not a request for charity. It is an invitation to be
+              early. The people who matter in cultural history are rarely the
+              ones who arrived once something was already famous. Supporting
+              Udoidunima now means backing African cinema at the exact moment it
+              is becoming something the world is ready for — before the world
+              has noticed.
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <a
+                href="https://www.oncrowdr.com/explore/c/supporting-udoidunima-the-film?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-block",
+                  background: "#fff",
+                  color: "#1a1a1a",
+                  padding: "1rem 2rem",
+                  borderRadius: "8px",
+                  fontWeight: 600,
+                  fontSize: "1rem",
+                  textDecoration: "none",
+                  transition: "all 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "#f0f0f0";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "#fff";
+                }}
+              >
+                Support Udoidunima The Film
+              </a>
+            </div>
+          </div>
+
+          <hr
+            style={{
+              border: "none",
+              borderTop: "1px solid #eee",
+              marginBottom: "4rem",
+            }}
+          />
+
+          {/* Contact Form */}
+          <div style={{ marginBottom: "2.5rem" }}>
             <p
               style={{
                 fontSize: "0.85rem",
@@ -651,17 +752,17 @@ export default function BabyLionProductions() {
             >
               Get In Touch
             </p>
-            <h2
+            <h3
               style={{
-                fontSize: "clamp(2rem, 5vw, 3rem)",
+                fontSize: "clamp(1.5rem, 3vw, 2rem)",
                 fontWeight: 700,
-                marginBottom: "1rem",
+                marginBottom: "0.75rem",
                 letterSpacing: "-0.02em",
               }}
             >
               Let's Create Together
-            </h2>
-            <p style={{ color: "#666", maxWidth: "500px", margin: "0 auto" }}>
+            </h3>
+            <p style={{ color: "#666" }}>
               Have a project in mind? We'd love to hear from you. Send us a
               message and let's start the conversation.
             </p>
